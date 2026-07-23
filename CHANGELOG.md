@@ -1,6 +1,8 @@
 # Changelog
 
-## 0.1.0 (unreleased)
+## 0.1.0 (2026-07-23)
+
+Published to PyPI as `imlx-gate`; the import and CLI are `imlx`.
 
 Initial reference implementation against SPEC v0.1.
 

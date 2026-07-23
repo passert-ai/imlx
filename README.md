@@ -20,9 +20,12 @@ The model produces; the gate decides.
 
 ## Install
 
-    pip install imlx
+    pip install imlx-gate
 
-Zero runtime dependencies.
+Zero runtime dependencies. The distribution is `imlx-gate`; the import
+and the command are both `imlx`:
+
+    import imlx
 
 ## Use
 
