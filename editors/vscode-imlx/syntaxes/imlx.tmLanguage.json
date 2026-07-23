@@ -1,0 +1,194 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "IMLX",
+  "scopeName": "source.imlx",
+  "fileTypes": ["imlx"],
+  "patterns": [
+    { "include": "#header" },
+    { "include": "#pagebreak" },
+    { "include": "#envelope" },
+    { "include": "#declare-heading" },
+    { "include": "#trace-heading" },
+    { "include": "#heading" },
+    { "include": "#table-separator" },
+    { "include": "#table-row" },
+    { "include": "#bullet" },
+    { "include": "#math-fence" },
+    { "include": "#reference" }
+  ],
+  "repository": {
+    "header": {
+      "patterns": [
+        {
+          "match": "^(IMLX)(:) (0\\.1)$",
+          "captures": {
+            "1": { "name": "keyword.control.header.imlx" },
+            "2": { "name": "punctuation.separator.key-value.imlx" },
+            "3": { "name": "constant.numeric.version.imlx" }
+          }
+        },
+        {
+          "match": "^(DECLARATIONS)(:) (INLINE)$",
+          "captures": {
+            "1": { "name": "keyword.control.header.imlx" },
+            "2": { "name": "punctuation.separator.key-value.imlx" },
+            "3": { "name": "constant.language.inline.imlx" }
+          }
+        },
+        {
+          "match": "^(DECLARATIONS)(:) ([A-Za-z0-9._-]+\\.imlx)(;) ([0-9.]+)$",
+          "captures": {
+            "1": { "name": "keyword.control.header.imlx" },
+            "2": { "name": "punctuation.separator.key-value.imlx" },
+            "3": { "name": "string.unquoted.filename.imlx" },
+            "4": { "name": "punctuation.separator.imlx" },
+            "5": { "name": "constant.numeric.version.imlx" }
+          }
+        },
+        {
+          "match": "^(DECL_VERSION)(:) ([0-9.]+)$",
+          "captures": {
+            "1": { "name": "keyword.control.header.imlx" },
+            "2": { "name": "punctuation.separator.key-value.imlx" },
+            "3": { "name": "constant.numeric.version.imlx" }
+          }
+        }
+      ]
+    },
+    "pagebreak": {
+      "match": "^%%PAGEBREAK%%$",
+      "name": "keyword.control.pagebreak.imlx"
+    },
+    "envelope": {
+      "patterns": [
+        {
+          "match": "^(:::) (\\{)(custom-style)(=)(\")([A-Za-z0-9_]+)(\")(\\})$",
+          "captures": {
+            "1": { "name": "punctuation.definition.envelope.begin.imlx" },
+            "2": { "name": "punctuation.definition.dictionary.begin.imlx" },
+            "3": { "name": "entity.other.attribute-name.imlx" },
+            "4": { "name": "punctuation.separator.key-value.imlx" },
+            "5": { "name": "punctuation.definition.string.begin.imlx" },
+            "6": { "name": "entity.name.type.block.imlx" },
+            "7": { "name": "punctuation.definition.string.end.imlx" },
+            "8": { "name": "punctuation.definition.dictionary.end.imlx" }
+          }
+        },
+        {
+          "match": "^:::$",
+          "name": "punctuation.definition.envelope.end.imlx"
+        }
+      ]
+    },
+    "declare-heading": {
+      "match": "^(#) (DECLARE) (TYPE|PROCEDURE|CONVERTER|REGISTER|SYMBOL|POLICY)$",
+      "captures": {
+        "1": { "name": "punctuation.definition.heading.imlx" },
+        "2": { "name": "keyword.control.declare.imlx" },
+        "3": { "name": "storage.type.declare-kind.imlx" }
+      }
+    },
+    "trace-heading": {
+      "match": "^(#) (TRACE) (.+)$",
+      "captures": {
+        "1": { "name": "punctuation.definition.heading.imlx" },
+        "2": { "name": "keyword.control.trace.imlx" },
+        "3": { "name": "string.unquoted.filename.imlx" }
+      }
+    },
+    "heading": {
+      "match": "^(#{1,3}) (.+)$",
+      "captures": {
+        "1": { "name": "punctuation.definition.heading.imlx" },
+        "2": { "name": "markup.heading.imlx" }
+      }
+    },
+    "table-separator": {
+      "match": "^\\|( :--- \\|)+$",
+      "name": "punctuation.definition.table.separator.imlx"
+    },
+    "table-row": {
+      "begin": "^(\\|) ",
+      "beginCaptures": { "1": { "name": "punctuation.definition.table.imlx" } },
+      "end": "$",
+      "patterns": [
+        {
+          "match": "\\b(LOAD|SEARCH|QUERY|SELECT|PARSE|LABEL|EXTRACT|CONCAT|INSERT|APPEND|POPULATE|FOR_EACH|IF/THEN/ELSE|EXECUTE|DECLARE|SLOT|VERIFY|CONVERT|COMPUTE|OUTPUT_PRINT|GATE)\\b",
+          "name": "keyword.operator.opcode.imlx"
+        },
+        {
+          "match": "\\b(GATE_L1|GATE_L2|STEP|BIND|SLOT_OPEN|SLOT_FILL|GATE_VERDICT|HALT)\\b",
+          "name": "keyword.other.trace-event.imlx"
+        },
+        {
+          "match": "\\b(PASS|BOUND|FILLED|SKELETON|DONE)\\b",
+          "name": "constant.language.outcome.pass.imlx"
+        },
+        {
+          "match": "\\bFAIL\\b",
+          "name": "invalid.illegal.outcome.fail.imlx"
+        },
+        {
+          "match": "\\b(step|opcode|operand|bind|style|seq|event|subject|outcome|digest|name|capabilities|sigil_name|target|type|kind|payload_ref|signature|from|to)\\b",
+          "name": "entity.other.attribute-name.column.imlx"
+        },
+        {
+          "match": "(@)([A-Za-z][A-Za-z0-9_]*)",
+          "captures": {
+            "1": { "name": "punctuation.definition.reference.imlx" },
+            "2": { "name": "variable.other.reference.imlx" }
+          }
+        },
+        {
+          "match": "\\breg_[A-Za-z0-9_]+\\b",
+          "name": "variable.other.register.imlx"
+        },
+        {
+          "match": "\\b(ground|type|blocklist|THEN|ELSE)(=)",
+          "captures": {
+            "1": { "name": "entity.other.attribute-name.contract.imlx" },
+            "2": { "name": "punctuation.separator.key-value.imlx" }
+          }
+        },
+        {
+          "match": "\\b[0-9a-f]{64}\\b",
+          "name": "constant.numeric.digest.imlx"
+        },
+        {
+          "match": "(\")([^\"]*)(\")",
+          "captures": {
+            "1": { "name": "punctuation.definition.string.begin.imlx" },
+            "2": { "name": "string.quoted.double.imlx" },
+            "3": { "name": "punctuation.definition.string.end.imlx" }
+          }
+        },
+        {
+          "match": "\\b[0-9]+(\\.[0-9]+)*\\b",
+          "name": "constant.numeric.imlx"
+        },
+        {
+          "match": " \\| |\\|$",
+          "name": "punctuation.definition.table.imlx"
+        }
+      ]
+    },
+    "bullet": {
+      "match": "^(\\* \\* |\\* )",
+      "name": "punctuation.definition.list.bullet.imlx"
+    },
+    "math-fence": {
+      "begin": "\\$",
+      "end": "\\$",
+      "name": "markup.inline.raw.math.imlx",
+      "beginCaptures": { "0": { "name": "punctuation.definition.math.begin.imlx" } },
+      "endCaptures": { "0": { "name": "punctuation.definition.math.end.imlx" } }
+    },
+    "reference": {
+      "match": "(@)([A-Za-z][A-Za-z0-9_]*)",
+      "captures": {
+        "1": { "name": "punctuation.definition.reference.imlx" },
+        "2": { "name": "variable.other.reference.imlx" }
+      }
+    }
+  }
+}
