@@ -1,0 +1,8 @@
+IMLX: 0.1
+DECLARATIONS: INLINE
+
+# DECLARE GRAMMAR
+
+| name | rule |
+| :--- | :--- |
+| Extension | anything |

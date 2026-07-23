@@ -1,0 +1,8 @@
+IMLX: 0.1
+DECLARATIONS: catalog-decls.imlx; 2.0
+
+# Version Mismatch
+
+| step | opcode | operand | bind | style |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | LOAD | @Corpus_Catalog | reg_corpus | - |

@@ -1,0 +1,20 @@
+IMLX: 0.1
+DECLARATIONS: INLINE
+
+# TRACE px140-brief.imlx
+
+| seq | event | step | opcode | subject | outcome | digest |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | GATE_L1 | - | - | px140-brief.imlx | PASS | - |
+| 2 | GATE_L2 | - | - | catalog-decls.imlx; 1.0 | PASS | - |
+| 3 | STEP | 1 | LOAD | reg_corpus | DONE | - |
+| 4 | BIND | 1 | LOAD | reg_corpus | BOUND | 395d8c41c94e2a9715705f39862642c462edca51499e81a1266c27c43f6427d5 |
+| 5 | STEP | 2 | QUERY | reg_part | DONE | - |
+| 6 | BIND | 2 | QUERY | reg_part | BOUND | 9850ff605d0f2a0c50c3f9636cbf182bd0fea2894894c1741c2bb4d97f05fdc1 |
+| 7 | STEP | 3 | EXTRACT | reg_torque | DONE | - |
+| 8 | BIND | 3 | EXTRACT | reg_torque | BOUND | b2526f20ea29ec908e09b4d4720962af81136a060b5c91e6393674d059419c2d |
+| 9 | SLOT_OPEN | 4 | SLOT | type=PartSummary | DONE | - |
+| 10 | SLOT_FILL | 4 | SLOT | reg_summary | SKELETON | - |
+| 11 | GATE_VERDICT | 5 | GATE | reg_summary | PASS | - |
+| 12 | STEP | 6 | OUTPUT_PRINT | reg_summary | DONE | - |
+| 13 | HALT | 6 | - | px140-brief.imlx | PASS | - |

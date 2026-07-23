@@ -1,0 +1,9 @@
+IMLX: 0.1
+DECLARATIONS: INLINE
+
+::: {custom-style="Outer"}
+outer content
+::: {custom-style="Inner"}
+inner content
+:::
+:::

@@ -1,0 +1,22 @@
+IMLX: 0.1
+DECLARATIONS: INLINE
+
+# Field Notes
+
+## Observations
+
+A plain paragraph with straight "quotes" and an apostrophe's use.
+It continues on a second hard-broken line; punctuation like (this) is fine.
+
+* first bullet
+* second bullet
+* * indented sublevel
+
+The relation $a + b = c$ and the bound $x < 10$ stay inside fences.
+
+%%PAGEBREAK%%
+
+| site | reading |
+| :--- | :--- |
+| north | 12.4 |
+| south | 9.87 |

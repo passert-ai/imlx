@@ -1,0 +1,15 @@
+IMLX: 0.1
+DECLARATIONS: INLINE
+
+# DECLARE TYPE
+
+| name | capabilities |
+| :--- | :--- |
+| ProcedureSteps | legal_lists |
+
+::: {custom-style="ProcedureSteps"}
+Step 1: open the intake valve
+1.1 confirm the seal
+1.2 record the reading
+Step 2: close the intake valve
+:::

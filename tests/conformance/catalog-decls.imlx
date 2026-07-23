@@ -1,0 +1,28 @@
+IMLX: 0.1
+DECLARATIONS: INLINE
+DECL_VERSION: 1.0
+
+# DECLARE TYPE
+
+| name | capabilities |
+| :--- | :--- |
+| PartSummary | - |
+| InspectionSteps | legal_lists |
+
+# DECLARE SYMBOL
+
+| sigil_name | target |
+| :--- | :--- |
+| Corpus_Catalog | catalog-2026.imlx |
+
+# DECLARE REGISTER
+
+| name | type |
+| :--- | :--- |
+| reg_part | PartRecord |
+
+# DECLARE POLICY
+
+| name | kind | payload_ref |
+| :--- | :--- | :--- |
+| Policy_Std | blocklist | policies-std.imlx |

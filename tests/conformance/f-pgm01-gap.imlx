@@ -1,0 +1,7 @@
+IMLX: 0.1
+DECLARATIONS: catalog-decls.imlx; 1.0
+
+| step | opcode | operand | bind | style |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | LOAD | @Corpus_Catalog | reg_corpus | - |
+| 3 | EXTRACT | reg_corpus; torque_spec | reg_torque | - |

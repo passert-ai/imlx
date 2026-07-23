@@ -1,0 +1,194 @@
+[
+  {
+    "artifact": "px140-brief.imlx",
+    "decls": "catalog-decls.imlx",
+    "expect_l1": "PASS",
+    "expect_l2": "PASS",
+    "codes": [],
+    "note": "flagship: corrected SPEC Appendix B program, external declaration mode"
+  },
+  {
+    "artifact": "catalog-decls.imlx",
+    "decls": null,
+    "expect_l1": "PASS",
+    "expect_l2": "PASS",
+    "codes": [],
+    "note": "a declaration file is itself an IMLX artifact (SPEC 10.3)"
+  },
+  {
+    "artifact": "content-basics.imlx",
+    "decls": null,
+    "expect_l1": "PASS",
+    "expect_l2": "PASS",
+    "codes": [],
+    "note": "headings, bullets, sublevel, math fencing, pagebreak, content table"
+  },
+  {
+    "artifact": "capability-pass.imlx",
+    "decls": null,
+    "expect_l1": "PASS",
+    "expect_l2": "PASS",
+    "codes": [],
+    "note": "legal lists and Step numbering inside a legal_lists-capable type (SPEC 6.2, 8)"
+  },
+  {
+    "artifact": "f-enc01-crlf.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-ENC01"
+    ],
+    "note": "CRLF"
+  },
+  {
+    "artifact": "f-enc01-no-final-newline.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-ENC01"
+    ],
+    "note": "trailing final newline is REQUIRED (SPEC 5.1)"
+  },
+  {
+    "artifact": "f-hdr01-malformed.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-HDR01"
+    ],
+    "note": "line 2 is not a legal pairing line"
+  },
+  {
+    "artifact": "f-chr01-emdash.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-CHR01"
+    ],
+    "note": "em dash"
+  },
+  {
+    "artifact": "f-con01-emphasis.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-CON01"
+    ],
+    "note": "asterisk emphasis (SPEC 6.3)"
+  },
+  {
+    "artifact": "f-env01-nested.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-ENV01"
+    ],
+    "note": "envelopes MUST NOT nest (SPEC 7.1)"
+  },
+  {
+    "artifact": "f-tbl01-ragged.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-TBL01"
+    ],
+    "note": "row cell count differs from header"
+  },
+  {
+    "artifact": "f-pgm01-gap.imlx",
+    "decls": "catalog-decls.imlx",
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-PGM01"
+    ],
+    "note": "step counter gap (SPEC 11.1)"
+  },
+  {
+    "artifact": "f-pair01-version.imlx",
+    "decls": "catalog-decls.imlx",
+    "expect_l1": "PASS",
+    "expect_l2": "FAIL",
+    "codes": [
+      "L2-PAIR01"
+    ],
+    "note": "artifact demands 2.0; file declares DECL_VERSION 1.0"
+  },
+  {
+    "artifact": "f-typ01-unregistered.imlx",
+    "decls": "catalog-decls.imlx",
+    "expect_l1": "PASS",
+    "expect_l2": "FAIL",
+    "codes": [
+      "L2-TYP01"
+    ],
+    "note": "unresolvable block type (Law 4)"
+  },
+  {
+    "artifact": "f-ref01-unresolved.imlx",
+    "decls": "catalog-decls.imlx",
+    "expect_l1": "PASS",
+    "expect_l2": "FAIL",
+    "codes": [
+      "L2-REF01"
+    ],
+    "note": "zero targets for @Corpus_Missing (SPEC 9)"
+  },
+  {
+    "artifact": "f-reg01-use-before-bind.imlx",
+    "decls": "catalog-decls.imlx",
+    "expect_l1": "PASS",
+    "expect_l2": "FAIL",
+    "codes": [
+      "L2-REG01"
+    ],
+    "note": "register used before bind (SPEC 11.2)"
+  },
+  {
+    "artifact": "f-opd01-slot-contract.imlx",
+    "decls": "catalog-decls.imlx",
+    "expect_l1": "PASS",
+    "expect_l2": "FAIL",
+    "codes": [
+      "L2-OPD01"
+    ],
+    "note": "SLOT contract missing blocklist (SPEC 11.2)"
+  },
+  {
+    "artifact": "f-dup01-decl.imlx",
+    "decls": null,
+    "expect_l1": "PASS",
+    "expect_l2": "FAIL",
+    "codes": [
+      "L2-DUP01"
+    ],
+    "note": "duplicate declaration: no precedence, no overlay, no merge (SPEC 10.2)"
+  },
+  {
+    "artifact": "f-cap01-missing-capability.imlx",
+    "decls": null,
+    "expect_l1": "PASS",
+    "expect_l2": "FAIL",
+    "codes": [
+      "L2-CAP01"
+    ],
+    "note": "PROPOSED CODE: construct requires undeclared type capability (SPEC 6.2, 8)"
+  },
+  {
+    "artifact": "f-dec01-unknown-kind.imlx",
+    "decls": null,
+    "expect_l1": "PASS",
+    "expect_l2": "FAIL",
+    "codes": [
+      "L2-DEC01"
+    ],
+    "note": "PROPOSED CODE: unknown DECLARE kind; also an in-band grammar-modification attempt made inert (Law 3)"
+  }
+]

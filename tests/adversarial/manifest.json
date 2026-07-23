@@ -1,0 +1,170 @@
+[
+  {
+    "artifact": "a-zero-width.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-CHR01"
+    ],
+    "note": "zero-width space U+200B"
+  },
+  {
+    "artifact": "a-nbsp.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-CHR01"
+    ],
+    "note": "NBSP U+00A0"
+  },
+  {
+    "artifact": "a-smart-quote.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-CHR01"
+    ],
+    "note": "curly quotes U+201C/U+201D"
+  },
+  {
+    "artifact": "a-confusable-cyrillic.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-CHR01"
+    ],
+    "note": "unicode confusable U+0430 in latin word"
+  },
+  {
+    "artifact": "a-ellipsis.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-CHR01"
+    ],
+    "note": "ellipsis character U+2026"
+  },
+  {
+    "artifact": "a-ampersand.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-CHR01"
+    ],
+    "note": "ampersand"
+  },
+  {
+    "artifact": "a-unicode-bullet.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-CHR01"
+    ],
+    "note": "bullet U+2022"
+  },
+  {
+    "artifact": "a-backtick-fence.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-CHR01"
+    ],
+    "note": "backtick fences"
+  },
+  {
+    "artifact": "a-html-tag.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-CHR01"
+    ],
+    "note": "HTML tags: < and > are fence-only mathematical symbols"
+  },
+  {
+    "artifact": "a-tab.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-ENC01"
+    ],
+    "note": "tab character (SPEC 5.1)"
+  },
+  {
+    "artifact": "a-yaml-indent.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-CON01"
+    ],
+    "note": "YAML-lookalike indentation (leading whitespace)"
+  },
+  {
+    "artifact": "a-envelope-trailing.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-CHR01"
+    ],
+    "note": "envelope abuse: tokens outside the two exact line forms"
+  },
+  {
+    "artifact": "a-step-zero.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-PGM01"
+    ],
+    "note": "step counter starts at 0"
+  },
+  {
+    "artifact": "a-step-duplicate.imlx",
+    "decls": null,
+    "expect_l1": "FAIL",
+    "expect_l2": null,
+    "codes": [
+      "L1-PGM01"
+    ],
+    "note": "duplicate step number"
+  },
+  {
+    "artifact": "a-symbol-ambiguity.imlx",
+    "decls": null,
+    "expect_l1": "PASS",
+    "expect_l2": "FAIL",
+    "codes": [
+      "L2-DUP01"
+    ],
+    "note": "reference ambiguity: two targets for one sigil (SPEC 9, 10.2)"
+  },
+  {
+    "artifact": "a-inband-header.imlx",
+    "decls": null,
+    "expect_l1": "PASS",
+    "expect_l2": "PASS",
+    "codes": [],
+    "note": "in-band grammar modification attempt: documents cannot say anything about IMLX (Law 3); the gate treats it as plain text"
+  },
+  {
+    "artifact": "a-excluded-verb.imlx",
+    "decls": null,
+    "expect_l1": "PASS",
+    "expect_l2": "FAIL",
+    "codes": [
+      "L2-OPD01"
+    ],
+    "note": "semantic verb outside the boundary (SPEC 12): SLOT work, not an opcode"
+  }
+]

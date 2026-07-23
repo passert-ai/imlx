@@ -1,0 +1,13 @@
+IMLX: 0.1
+DECLARATIONS: catalog-decls.imlx; 1.0
+
+# PX-140 Service Brief
+
+| step | opcode | operand | bind | style |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | LOAD | @Corpus_Catalog | reg_corpus | - |
+| 2 | QUERY | reg_corpus; part_no; "PX-140" | reg_part | - |
+| 3 | EXTRACT | reg_part; torque_spec | reg_torque | - |
+| 4 | SLOT | ground=reg_part; type=PartSummary; blocklist=@Policy_Std | reg_summary | PartSummary |
+| 5 | GATE | reg_summary | reg_verdict | - |
+| 6 | OUTPUT_PRINT | reg_summary | - | PartSummary |

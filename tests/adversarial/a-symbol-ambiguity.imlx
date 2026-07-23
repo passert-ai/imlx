@@ -1,0 +1,9 @@
+IMLX: 0.1
+DECLARATIONS: INLINE
+
+# DECLARE SYMBOL
+
+| sigil_name | target |
+| :--- | :--- |
+| Corpus_A | one.imlx |
+| Corpus_A | two.imlx |

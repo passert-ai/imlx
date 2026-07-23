@@ -1,0 +1,7 @@
+IMLX: 0.1
+DECLARATIONS: INLINE
+
+| step | opcode | operand | bind | style |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | LABEL | alpha | reg_a | - |
+| 1 | LABEL | beta | reg_b | - |

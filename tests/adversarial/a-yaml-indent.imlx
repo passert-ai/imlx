@@ -1,0 +1,5 @@
+IMLX: 0.1
+DECLARATIONS: INLINE
+
+config:
+  key: value
