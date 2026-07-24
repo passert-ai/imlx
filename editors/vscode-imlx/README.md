@@ -10,5 +10,5 @@ pipe tables, the 21 opcodes, trace events and outcomes, registers,
 
 Language and reference gate: https://github.com/passert-ai/imlx
 
-    pip install imlx
+    pip install imlx-gate
     imlx gate artifact.imlx

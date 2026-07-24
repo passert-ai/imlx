@@ -2,19 +2,37 @@
   "name": "imlx",
   "displayName": "IMLX",
   "description": "Syntax highlighting for IMLX: Invariant Markup Language (eXtended) - the gated plain-text format where validation is a single bit.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "passert-ai",
   "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/passert-ai/imlx" },
-  "engines": { "vscode": "^1.75.0" },
-  "categories": ["Programming Languages"],
-  "keywords": ["imlx", "markup", "deterministic", "gate", "llm"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/passert-ai/imlx"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "imlx",
+    "markup",
+    "deterministic",
+    "gate",
+    "llm"
+  ],
   "contributes": {
     "languages": [
       {
         "id": "imlx",
-        "aliases": ["IMLX", "imlx"],
-        "extensions": [".imlx"],
+        "aliases": [
+          "IMLX",
+          "imlx"
+        ],
+        "extensions": [
+          ".imlx"
+        ],
         "configuration": "./language-configuration.json"
       }
     ],
@@ -25,5 +43,6 @@
         "path": "./syntaxes/imlx.tmLanguage.json"
       }
     ]
-  }
+  },
+  "icon": "icon.png"
 }
